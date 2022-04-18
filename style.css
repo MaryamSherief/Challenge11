@@ -1,0 +1,171 @@
+:root {
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, var(--Soft-violet),var(--Soft-blue));
+    color: var(--Very-dark-desaturated-blue);
+}
+
+main {
+    width: 60rem;
+    height: 35rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.left-side {
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-position: -35rem -20rem;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.girl {
+    position: relative;
+    top: 10%;
+    left: -10%;
+}
+
+.girl-mobile {
+    display: none;
+}
+
+.girl-img-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.box {
+    position: absolute;
+    left: -15%;
+    top: 35%;
+}
+
+.right-side {
+    padding: 5rem 5rem 5rem 0 ;
+    width: 50%;
+    height: 100%;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+.q {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.question {
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.answer {
+    margin: 1rem 0;
+}
+
+.question:hover {
+    color: var(--Soft-red);
+}
+
+.question.clicked {
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+hr {
+    background-color: var(--Light-grayish-blue);
+    border: 1px solid var(--Light-grayish-blue);
+}
+
+.arrow-down.clicked {
+    transform: rotate(-180deg);
+}
+
+.arrow-down {
+    cursor: pointer;
+}
+
+@media (max-width: 1010px) {
+    body {
+        margin: 5%;
+    }
+    main {
+        flex-direction: column;
+        width: 25rem;
+        padding: 0 2rem 2rem 2rem;
+        height: auto;
+        
+    }
+    .left-side {
+        background-image: url(images/bg-pattern-mobile.svg);
+        background-position: top center;
+        background-repeat: no-repeat;
+        width: 80%;
+        height: 100%;
+        position: relative;
+    }
+    .girl {
+        display: none;
+    }
+    .box {
+        display: none;
+    }
+    .girl-img-container {
+        overflow: visible;
+        height: 7rem;
+    }
+    .girl-mobile {
+        display: block;
+        position: relative;
+        width: 90%;
+        bottom: 75%;
+        left: 5%;
+    }
+    .right-side {
+        margin-top: 2rem;
+        width: 100%;
+        padding: 0;
+    }
+    h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        margin:  25% 5%;
+    }
+}
