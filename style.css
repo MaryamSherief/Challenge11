@@ -166,6 +166,6 @@ hr {
 
 @media (max-width: 450px) {
     body {
-        margin:  25% 5%;
+        margin:  25% 5% 5%;
     }
 }
